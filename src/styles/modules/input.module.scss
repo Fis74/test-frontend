@@ -1,0 +1,45 @@
+.body {
+  position: relative;
+  max-width: 400px;
+  padding-right: 40px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  svg {
+    position: absolute;
+    top: 5px;
+    right: 0px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    color: var(--primary);
+    transition: color 0.8s;
+    &:hover {
+      color: var(--red);
+    }
+  }
+}
+.input {
+  border: none;
+  border-bottom: 1px solid var(--gray);
+  padding: 10px 10px;
+  width: 100%;
+  outline: none;
+  resize: none;
+  transition: border-bottom 0.8s;
+  &:hover {
+    border-bottom: 1px solid var(--red);
+  }
+}
+.value {
+  border-bottom: 1px solid var(--primary);
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
