@@ -28,14 +28,14 @@ const ProductPagination: FC<ProductPagination> = ({ isLoading, data, filteredDat
     <div className={getClasses([styles.inner])}>
       {filteredData?.length && data?.length ? (
         <>
-          <Button disabled={isLoading || page < 2} onClick={handleBack}>
+          <Button disabled={isLoading || page < limit} onClick={handleBack}>
             Предыдущая страница
           </Button>
           <p>{page}</p>
           <Button
             disabled={
               isLoading ||
-              (data && data?.length < limit) ||
+              (filteredData && filteredData?.length < limit) ||
               (action === Action.filter && data?.length < limit * page)
             }
             onClick={handleNext}
