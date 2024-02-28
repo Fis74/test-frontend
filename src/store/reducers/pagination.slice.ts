@@ -54,7 +54,7 @@ export const paginationSlice = createSlice({
         state.pages = state.pages.slice(0, state.page);
         state.page -= 1;
         state.next = false;
-        state.currentPageOption = state.pages[state.page];
+        state.currentPageOption = state.pages[state.page - 1];
         state.offset = state.offset - state.currentPageOption.offsetPage - state.limit;
       }
       if (state.action === Action.filter) {
